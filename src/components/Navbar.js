@@ -34,7 +34,6 @@ const styles = {
   },
   divLogo: {
     fontSize: '1.5rem',
-    fontWeight: 'bold',
     display:'flex',
     justifyContent:'space-between',
   },
@@ -61,6 +60,7 @@ const styles = {
 
    titreNavbar: {
     color:'#06022A',
+    fontStyle:'italic',
   },
 
   linkHover: {

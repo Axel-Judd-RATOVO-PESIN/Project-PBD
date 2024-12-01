@@ -43,6 +43,8 @@ button:disabled {
   color: red;
 }
 
+
+
 /*Style survol lien Documentation*/
 nav a:hover {
   color: #61dafb;
@@ -60,4 +62,11 @@ footer {
   font-size: '0.9rem';
 }
 
-
+/*--- Style pour image eglise acceuil ---*/
+#imgEglise {
+  width: 100%; /* Largeur fixe */
+  height: 300px; /* Hauteur fixe pour recadrer */
+  object-fit: cover; /* Recadre l'image sans déformer */
+  overflow: hidden; /* Assure que l'image reste dans ses limites */
+  display: block; /* S'assurer qu'il se comporte comme un bloc */
+}
