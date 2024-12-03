@@ -70,3 +70,97 @@ footer {
   overflow: hidden; /* Assure que l'image reste dans ses limites */
   display: block; /* S'assurer qu'il se comporte comme un bloc */
 }
+
+/*---- STYLE POUR LE TABLEAU DE RESULTAT ----*/
+/* Style global pour l'interface de requête */
+.query-interface {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 90%; /* Limite la largeur de l'interface */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Style pour afficher les erreurs */
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Style pour les résultats */
+.results {
+  margin-top: 20px;
+  text-align: left; /* Assure que le texte est aligné à gauche */
+}
+
+table {
+  width: 100%;
+  max-width: 1000px; /* Empêche le tableau d'être trop large */
+  margin: 20px auto; /* Centre le tableau et donne un peu de marge */
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e1f5fe;
+}
+

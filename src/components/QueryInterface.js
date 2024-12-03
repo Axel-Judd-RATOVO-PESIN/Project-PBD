@@ -6,7 +6,7 @@ const QueryInterface = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const sparqlEndpoint = 'http://localhost:7200/repositories/Projet_Eglise_Unesco/sparql';
+  const sparqlEndpoint = 'https://query.wikidata.org/sparql'; // Endpoint Wikidata
 
   const handleQueryChange = (e) => {
     setQuery(e.target.value);
@@ -17,6 +17,7 @@ const QueryInterface = () => {
     setError(null);
 
     try {
+      // Envoi de la requête SPARQL vers Wikidata
       const response = await fetch(sparqlEndpoint, {
         method: 'POST',
         headers: {
@@ -31,7 +32,7 @@ const QueryInterface = () => {
       }
 
       const data = await response.json();
-      setResults(data.results.bindings);
+      setResults(data.results.bindings); // Sauvegarde des résultats
     } catch (err) {
       setError(err.message);
     } finally {
