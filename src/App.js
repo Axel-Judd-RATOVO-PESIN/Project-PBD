@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Navbar />
       <main>
-        <img id="imgEglise" src="/imgEglise2.jpg" alt="image d'une église"/>
+        <img id="imgEglise" src="/imgEglise2.jpg" alt=""/>
         <QueryInterface/>
       </main>
       <footer>
