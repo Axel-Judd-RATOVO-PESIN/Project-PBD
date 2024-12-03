@@ -5,26 +5,41 @@ const QueryInterface = () => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  const sparqlEndpoint = 'https://query.wikidata.org/sparql'; // Endpoint Wikidata
+  const [graphDbEndpoint, setGraphDbEndpoint] = useState(''); // Champ pour GraphDB endpoint
+  const [appName, setAppName] = useState(''); // Champ pour le nom de l'application
 
   const handleQueryChange = (e) => {
     setQuery(e.target.value);
   };
 
+  const handleAppNameChange = (e) => {
+    setAppName(e.target.value);
+  };
+
+  const handleGraphDbEndpointChange = (e) => {
+    setGraphDbEndpoint(e.target.value);
+  };
+
   const handleExecuteQuery = async () => {
+    if (!graphDbEndpoint) {
+      setError('Veuillez entrer l\'URL de votre endpoint GraphDB.');
+      return;
+    }
+
     setLoading(true);
     setError(null);
 
     try {
-      // Envoi de la requête SPARQL vers Wikidata
-      const response = await fetch(sparqlEndpoint, {
+      const response = await fetch(graphDbEndpoint, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/sparql-query',
+          'Content-Type': 'application/x-www-form-urlencoded',
           Accept: 'application/json',
         },
-        body: query,
+        body: new URLSearchParams({
+          query: query,
+          format: 'json',
+        }),
       });
 
       if (!response.ok) {
@@ -32,7 +47,9 @@ const QueryInterface = () => {
       }
 
       const data = await response.json();
-      setResults(data.results.bindings); // Sauvegarde des résultats
+      const bindings = data.results.bindings;
+
+      setResults(bindings);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -42,7 +59,31 @@ const QueryInterface = () => {
 
   return (
     <div className="query-interface">
-      <h2>Interface de Requêtes SPARQL</h2>
+      <h2>Interface de Requêtes SPARQL pour GraphDB</h2>
+
+      {/* Champ pour le nom de l'application */}
+      <div className="input-group">
+        <input
+          type="text"
+          className="form-control"
+          value={appName}
+          onChange={handleAppNameChange}
+          placeholder="Nom de votre application web"
+        />
+      </div>
+
+      {/* Champ pour l'URL du SPARQL endpoint (GraphDB) */}
+      <div className="input-group mt-4">
+        <input
+          type="text"
+          className="form-control"
+          value={graphDbEndpoint}
+          onChange={handleGraphDbEndpointChange}
+          placeholder="Entrez l'URL de votre endpoint GraphDB (SPARQL)"
+        />
+      </div>
+
+      {/* Champ pour la requête SPARQL */}
       <textarea
         value={query}
         onChange={handleQueryChange}
@@ -50,10 +91,15 @@ const QueryInterface = () => {
         rows="10"
         cols="50"
       />
+
       <button onClick={handleExecuteQuery} disabled={loading}>
         {loading ? 'Exécution...' : 'Exécuter la Requête'}
       </button>
+
+      {/* Affichage de l'erreur */}
       {error && <p className="error">Erreur : {error}</p>}
+
+      {/* Affichage des résultats */}
       {results.length > 0 && (
         <div className="results">
           <h3>Résultats :</h3>
@@ -69,7 +115,9 @@ const QueryInterface = () => {
               {results.map((result, index) => (
                 <tr key={index}>
                   {Object.values(result).map((value, idx) => (
-                    <td key={idx}>{value.value}</td>
+                    <td key={idx}>
+                      {value.type === 'literal' ? value.value : value['xml:lang'] || value.value}
+                    </td>
                   ))}
                 </tr>
               ))}
