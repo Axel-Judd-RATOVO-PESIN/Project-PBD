@@ -27,7 +27,7 @@ const styles = {
     footer: {
         textalign : 'center',
         padding: '5px',
-        backgroundColor: '#F4EEE5',
+        backgroundColor: '#92cad4',
         color:'#06022A',
     },
     grillefooter: {
@@ -35,6 +35,15 @@ const styles = {
         gridTemplateColumns : 2,
         marginLeft: "40%",
         marginRight: "40%",
+    },
+
+    menu:{
+        listStyleType: "none",
+        
+    },
+
+    aLink :{
+        textDecoration: "none",
     },
 
     logoImage: {

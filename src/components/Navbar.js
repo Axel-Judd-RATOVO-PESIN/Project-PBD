@@ -34,7 +34,7 @@ const Navbar = () => {
 const styles = {
   container:{
     width:"auto",
-    height:"100vh",
+    height:"80vh",
     backgroundImage: 'url(https://images.unsplash.com/photo-1515162305285-0293e4767cc2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2h1cmNofGVufDB8fDB8fHww)',
   },
 
