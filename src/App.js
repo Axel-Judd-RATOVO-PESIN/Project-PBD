@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css'; // Assurez-vous que ce fichier contient votre style de base.
 import QueryInterface from './components/QueryInterface';
 import Navbar from './components/Navbar';
+import Namefield from './components/Namefield';
+import GraphUrl from './components/GraphUrl';
 
 function App() {
   return (
