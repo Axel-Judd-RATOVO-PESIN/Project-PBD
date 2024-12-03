@@ -6,6 +6,8 @@ const QueryInterface = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const sparqlEndpoint = 'http://localhost:7200/repositories/Projet_Eglise_Unesco/sparql';
+
   const handleQueryChange = (e) => {
     setQuery(e.target.value);
   };
@@ -15,8 +17,7 @@ const QueryInterface = () => {
     setError(null);
 
     try {
-      // Exemple de requête pour SPARQL
-      const response = await fetch('https://query.wikidata.org/sparql', {
+      const response = await fetch(sparqlEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/sparql-query',
@@ -40,7 +41,7 @@ const QueryInterface = () => {
 
   return (
     <div className="query-interface">
-      <h2>Interface de Requêtes</h2>
+      <h2>Interface de Requêtes SPARQL</h2>
       <textarea
         value={query}
         onChange={handleQueryChange}
@@ -55,13 +56,24 @@ const QueryInterface = () => {
       {results.length > 0 && (
         <div className="results">
           <h3>Résultats :</h3>
-          <ul>
-            {results.map((result, index) => (
-              <li key={index}>
-                {JSON.stringify(result)} {/* Remplacez cela par un affichage formaté */}
-              </li>
-            ))}
-          </ul>
+          <table>
+            <thead>
+              <tr>
+                {Object.keys(results[0]).map((key, index) => (
+                  <th key={index}>{key}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {results.map((result, index) => (
+                <tr key={index}>
+                  {Object.values(result).map((value, idx) => (
+                    <td key={idx}>{value.value}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       )}
     </div>
