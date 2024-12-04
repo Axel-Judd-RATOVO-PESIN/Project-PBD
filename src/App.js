@@ -7,11 +7,9 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <main>
+        <Navbar />
         <QueryInterface/>
-      </main>
-      <Footer/>
+        <Footer/>
     </div>
   );
 }

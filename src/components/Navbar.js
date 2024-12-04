@@ -4,80 +4,89 @@ const Navbar = () => {
   return (
     <div style={styles.container}>
       <nav style={styles.navbar}>
-            <img src="/Logo1.png" alt="Logo" style={styles.logoImage}/>
-            <div style={styles.divLogo}>
-              <h1 style={styles.titreNavbar} > Projet BD</h1>
-            </div>
-            <ul style={styles.menu}>
-              <li>
-                <a
-                  href="/CV_RATOVO_PESIN_Axel.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={styles.link}
-                >
-                  Documentation
-                </a>
-              </li>
-            </ul>
-        </nav>
-        <div style={styles.row}>
-            <h1>Projet : Nouveaux Paradigmes de BD</h1>
-            <h3>Une application Web intelligente dotée d'une technologie sémantique concernant les églises classées à l'UNESCO</h3>
+        {/* Logo */}
+        <img src="/Logo1.png" alt="Logo" style={styles.logoImage} />
 
-        </div>
+        {/* Documentation Link */}
+        <a
+          href="/CV_RATOVO_PESIN_Axel.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={styles.link}
+        >
+          Documentation
+        </a>
+      </nav>
+
+      {/* Contenu à gauche */}
+      <div style={styles.textContainer}>
+        <p style={styles.paragraph}>
+          <strong>Projet : Nouveaux Paradigmes de BD <br /></strong>
+          Une application Web intelligente dotée d'une technologie sémantique concernant les églises classées à l'UNESCO
+        </p>
+        <button style={styles.button}><strong>Learn More</strong></button>
+      </div>
     </div>
-    
   );
 };
 
 const styles = {
-  container:{
-    width:"auto",
-    height:"80vh",
+  container: {
+    width: "100%",
+    height: "80vh",
     backgroundImage: 'url(https://images.unsplash.com/photo-1515162305285-0293e4767cc2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2h1cmNofGVufDB8fDB8fHww)',
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
   },
-
   navbar: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    color: 'white',
     padding: '10px 50px',
   },
-  divLogo: {
-    fontSize: '1.5rem',
-    display:'flex',
-    justifyContent:'space-between',
-  },
-
   logoImage: {
-    width: '120px ',
-  },
-
-
-  menu: {
-    listStyle: 'none',
-    display: 'flex',
-    margin: 0,
-    padding: 0,
+    width: '120px',
   },
   link: {
-    color:'#06022A',  
-    textDecoration:'none',  
-    marginLeft: '20px',
+    color: '#ffffff',
+    textDecoration: 'none',
     fontSize: '1rem',
     fontWeight: '500',
-    transition: 'color 0.3s',
+    padding: '10px 20px',
+    backgroundColor: '#06022A',
+    borderRadius: '5px',
+    transition: 'background-color 0.3s',
   },
-
-   titreNavbar: {
-    color:'#06022A',
-    fontStyle:'italic',
+  textContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    height: 'calc(80vh - 70px)', // Ajuster la hauteur pour occuper le reste de l'espace
+    padding: '50px',
   },
-
-  linkHover: {
-    color: '#61dafb',
+  paragraph: {
+    fontSize: '1.5rem',
+    color: 'black',
+    textAlign: 'left',
+    fontStyle: 'italic',
+    padding: '20px',
+    borderRadius: '10px',
+    marginBottom: '20px',
+  },
+  button: {
+    padding: '10px 20px',
+    backgroundColor: 'transparent',
+    color: 'black',
+    border: "0",
+    outline: "solid black",
+    borderRadius: '5px',
+    cursor: 'pointer',
+    fontSize: '1rem',
+    transition: 'background-color 0.3s',
   },
 };
 
