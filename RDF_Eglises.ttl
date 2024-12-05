@@ -1,0 +1,1076 @@
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix iut: <https://cours.iut-orsay.fr/npbd/projet/ratovo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+
+iut:1 a iut:Eglise;
+  iut:nomEglise "Tournai Cathedral";
+  iut:situéDans iut:102;
+  iut:anneeInscription "2000"^^xsd:gYear;
+  iut:description "cathedral " .
+
+iut:2 a iut:Eglise;
+  iut:nomEglise "Cathedral of Brasília";
+  iut:situéDans iut:103;
+  iut:anneeInscription "1987"^^xsd:gYear;
+  iut:description "Catholic church in Brasília, Brazil" .
+
+iut:3 a iut:Eglise;
+  iut:nomEglise "Boyana Church";
+  iut:situéDans iut:104;
+  iut:anneeInscription "1979"^^xsd:gYear;
+  iut:description """church in Bulgaria
+""" .
+
+iut:4 a iut:Eglise;
+  iut:nomEglise "Church of San Juan Bautista";
+  iut:situéDans iut:105;
+  iut:anneeInscription "2000"^^xsd:gYear;
+  iut:description "Medieval church located in Baños de Cerrato (Palencia province, Spain) " .
+
+iut:5 a iut:Eglise;
+  iut:nomEglise "La Grande Muraille";
+  iut:situéDans iut:106;
+  iut:anneeInscription "1987"^^xsd:gYear;
+  iut:description "church located in Gironde, in France" .
+
+iut:6 a iut:Eglise;
+  iut:nomEglise "Euphrasian Basilica";
+  iut:situéDans iut:107;
+  iut:anneeInscription "1997"^^xsd:gYear;
+  iut:description "church " .
+
+iut:7 a iut:Eglise;
+  owl:sameAs wd:Q391973;
+  iut:nomEglise "Šibenik Cathedral";
+  iut:situéDans iut:108;
+  iut:anneeInscription "2000"^^xsd:gYear;
+  iut:description "cathedral in Croatia";
+  iut:styleArchitectural wd:Q236122 .
+
+iut:8 a iut:Eglise;
+  iut:nomEglise "Saint Anthony church, Paphos";
+  iut:situéDans iut:109;
+  iut:anneeInscription "1980"^^xsd:gYear;
+  iut:description "byzantine church in Paphos, Cyprus" .
+
+iut:9 a iut:Eglise;
+  iut:nomEglise "Painted Churches in the Troödos Region";
+  iut:situéDans iut:110;
+  iut:anneeInscription "1985"^^xsd:gYear .
+
+iut:10 a iut:Eglise;
+  iut:nomEglise "Roskilde Cathedral";
+  iut:situéDans iut:111;
+  iut:anneeInscription "1995"^^xsd:gYear;
+  iut:description "cathedral in Denmark (Church of Denmark)" .
+
+iut:11 a iut:Eglise;
+  owl:sameAs wd:Q435829;
+  iut:nomEglise "Petäjävesi Old Church";
+  iut:situéDans iut:112;
+  iut:anneeInscription "1994"^^xsd:gYear;
+  iut:description "church building in Petäjävesi, Finland";
+  iut:styleArchitectural wd:Q176483 .
+
+iut:12 a iut:Eglise;
+  iut:nomEglise "Notre-Dame de Chartres";
+  iut:situéDans iut:113;
+  iut:anneeInscription "1979"^^xsd:gYear;
+  iut:description "medieval Roman Rite Catholic cathedral " .
+
+iut:13 a iut:Eglise;
+  iut:nomEglise "Notre-Dame d'Amiens";
+  iut:situéDans iut:114;
+  iut:anneeInscription "1981"^^xsd:gYear;
+  iut:description "cathedral located in Somme, in France" .
+
+iut:14 a iut:Eglise;
+  iut:nomEglise "Abbey Church of Saint-Savin-sur-Gartempe";
+  iut:situéDans iut:115;
+  iut:anneeInscription "1983"^^xsd:gYear;
+  iut:description "abbey located in Vienne, in France" .
+
+iut:15 a iut:Eglise;
+  iut:nomEglise "Bourges Cathedral";
+  iut:situéDans iut:116;
+  iut:anneeInscription "1992"^^xsd:gYear;
+  iut:description "cathedral in Bourges, Cher, France" .
+
+iut:16 a iut:Eglise;
+  owl:sameAs wd:Q5908;
+  iut:nomEglise "Aachen Cathedral";
+  iut:situéDans iut:117;
+  iut:anneeInscription "1978"^^xsd:gYear;
+  iut:description "Roman-Catholic cathedral in Aachen, Germany";
+  iut:styleArchitectural wd:Q176483, wd:Q9159129 .
+
+iut:17 a iut:Eglise;
+  iut:nomEglise "Speyer Cathedral";
+  iut:situéDans iut:118;
+  iut:anneeInscription "1981"^^xsd:gYear;
+  iut:description """cathedral in Speyer, Germany
+""" .
+
+iut:18 a iut:Eglise;
+  iut:nomEglise "St Mary's Cathedral and St Michael's Church at Hildesheim";
+  iut:situéDans iut:119;
+  iut:anneeInscription "1985"^^xsd:gYear;
+  iut:description "World Heritage site in Germany" .
+
+iut:19 a iut:Eglise;
+  owl:sameAs wd:Q156675;
+  iut:nomEglise "Wieskirche";
+  iut:situéDans iut:120;
+  iut:anneeInscription "1983"^^xsd:gYear;
+  iut:description "Roman Catholic church in the municipality of Steingaden, Bavaria, Germany";
+  iut:styleArchitectural wd:Q122960, wd:Q840829 .
+
+iut:20 a iut:Eglise;
+  owl:sameAs wd:Q316973;
+  iut:nomEglise "Saint Giles church (Lübeck)";
+  iut:situéDans iut:121;
+  iut:anneeInscription "1987"^^xsd:gYear;
+  iut:description "church in Lübeck (Schleswig-Holstein, Germany)";
+  iut:styleArchitectural wd:Q695863 .
+
+iut:21 a iut:Eglise;
+  owl:sameAs wd:Q4176;
+  iut:nomEglise "Cologne Cathedral";
+  iut:situéDans iut:122;
+  iut:anneeInscription "1996"^^xsd:gYear;
+  iut:description "Roman-Catholic cathedral in Cologne, Germany";
+  iut:styleArchitectural wd:Q176483, wd:Q46825 .
+
+iut:22 a iut:Eglise;
+  owl:sameAs wd:Q5938;
+  iut:nomEglise "Naumburg Cathedral";
+  iut:situéDans iut:123;
+  iut:anneeInscription "2018"^^xsd:gYear;
+  iut:description "cathedral in Saxony-Anhalt, Germany";
+  iut:styleArchitectural wd:Q176483, wd:Q46261 .
+
+iut:23 a iut:Eglise;
+  owl:sameAs wd:Q6446470;
+  iut:nomEglise "La Merced Church";
+  iut:situéDans iut:124;
+  iut:anneeInscription "1979"^^xsd:gYear;
+  iut:description "church in Antigua Guatemala";
+  iut:styleArchitectural wd:Q840829 .
+
+iut:24 a iut:Eglise;
+  owl:sameAs wd:Q1166213;
+  iut:nomEglise "St Stephen of the Abyssinians";
+  iut:situéDans iut:125;
+  iut:anneeInscription "1984"^^xsd:gYear;
+  iut:description "church of the Vatican City";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:25 a iut:Eglise;
+  owl:sameAs wd:Q5117224;
+  iut:nomEglise "Church of St. Francis of Assisi";
+  iut:situéDans iut:126;
+  iut:anneeInscription "1986"^^xsd:gYear;
+  iut:description "church and cloister in Velha Goa, India";
+  iut:styleArchitectural wd:Q37853 .
+
+iut:26 a iut:Eglise;
+  iut:nomEglise "Chiesa di tutti i Santi";
+  iut:situéDans iut:127;
+  iut:anneeInscription "1995"^^xsd:gYear;
+  iut:description "church building in Naples, Italy" .
+
+iut:27 a iut:Eglise;
+  owl:sameAs wd:Q1856400;
+  iut:nomEglise "Santissimo Nome di Maria al Foro Traiano";
+  iut:situéDans iut:128;
+  iut:anneeInscription "1995"^^xsd:gYear;
+  iut:description "church building in Rome, Italy";
+  iut:styleArchitectural wd:Q840829 .
+
+iut:28 a iut:Eglise;
+  iut:nomEglise "Arab-Norman Palermo and the Cathedral Churches of Cefalú and Monreale";
+  iut:situéDans iut:129;
+  iut:anneeInscription "2015"^^xsd:gYear;
+  iut:description "World Heritage Site in Sicily, Italy" .
+
+iut:29 a iut:Eglise;
+  iut:nomEglise "St. Paul's Church";
+  iut:situéDans iut:130;
+  iut:anneeInscription "1984"^^xsd:gYear;
+  iut:description "church in Vishakhapatnam, India" .
+
+iut:30 a iut:Eglise;
+  iut:nomEglise "Saint John, Byblos";
+  iut:situéDans iut:131;
+  iut:anneeInscription "1984"^^xsd:gYear;
+  iut:description "Cathedral in Byblos, Lebanon" .
+
+iut:31 a iut:Eglise;
+  owl:sameAs wd:Q10300613;
+  iut:nomEglise "Church of St Catherine of Italy, Valletta";
+  iut:situéDans iut:132;
+  iut:anneeInscription "1980"^^xsd:gYear;
+  iut:description "church building in Valletta, Malta";
+  iut:styleArchitectural wd:Q840829 .
+
+iut:32 a iut:Eglise;
+  owl:sameAs wd:Q48605;
+  iut:nomEglise "León Cathedral";
+  iut:situéDans iut:133;
+  iut:anneeInscription "2011"^^xsd:gYear;
+  iut:description "cathedral in Nicaragua";
+  iut:styleArchitectural wd:Q840829 .
+
+iut:33 a iut:Eglise;
+  owl:sameAs wd:Q210678;
+  iut:nomEglise "Urnes Stave Church";
+  iut:situéDans iut:134;
+  iut:anneeInscription "1979"^^xsd:gYear;
+  iut:description "church building in Luster, Vestland, Norway";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:34 a iut:Eglise;
+  iut:nomEglise "Batalha Monastery";
+  iut:situéDans iut:135;
+  iut:anneeInscription "1983"^^xsd:gYear;
+  iut:description "building in Batalha, Leiria District, Portugal" .
+
+iut:35 a iut:Eglise;
+  iut:nomEglise "Măzărache Church";
+  iut:situéDans iut:136;
+  iut:anneeInscription "1993"^^xsd:gYear;
+  iut:description "architectural monument of national importance in Moldova" .
+
+iut:36 a iut:Eglise;
+  iut:nomEglise "Church of the Ascension, Kolomenskoye";
+  iut:situéDans iut:137;
+  iut:anneeInscription "1994"^^xsd:gYear .
+
+iut:37 a iut:Eglise;
+  owl:sameAs wd:Q1709616;
+  iut:nomEglise "Saint-Louis en l'Île";
+  iut:situéDans iut:138;
+  iut:anneeInscription "2000"^^xsd:gYear;
+  iut:description "church located in Paris, in France";
+  iut:styleArchitectural wd:Q840829 .
+
+iut:38 a iut:Eglise;
+  owl:sameAs wd:Q112106047;
+  iut:nomEglise "Church of Visitation of Virgin Mary, Vlkolínec";
+  iut:situéDans iut:139;
+  iut:anneeInscription "1993"^^xsd:gYear;
+  iut:description "Roman Catholic church and national cultural monument in the town of Ružomberok, Vlkolínec borough, Ružomberok district, Slovakia";
+  iut:styleArchitectural wd:Q170292 .
+
+iut:39 a iut:Eglise;
+  iut:nomEglise "Garrison Church, Robben Island";
+  iut:situéDans iut:140;
+  iut:anneeInscription "1999"^^xsd:gYear;
+  iut:description """building in South Africa
+""" .
+
+iut:40 a iut:Eglise;
+  iut:nomEglise "Burgos Cathedral";
+  iut:situéDans iut:141;
+  iut:anneeInscription "1984"^^xsd:gYear;
+  iut:description "cathedral in Castile, Spain " .
+
+iut:41 a iut:Eglise;
+  owl:sameAs wd:Q645157;
+  iut:nomEglise "Poblet Monastery";
+  iut:situéDans iut:142;
+  iut:anneeInscription "1991"^^xsd:gYear;
+  iut:description "monastery";
+  iut:styleArchitectural wd:Q2864605 .
+
+iut:42 a iut:Eglise;
+  iut:nomEglise "Church of San Lázaro, San Cristóbal de La Laguna";
+  iut:situéDans iut:143;
+  iut:anneeInscription "1999"^^xsd:gYear;
+  iut:description "cultural property in San Cristóbal de La Laguna, Spain" .
+
+iut:43 a iut:Eglise;
+  owl:sameAs wd:Q1091515;
+  iut:nomEglise "Catalan Romanesque Churches of the Vall de Boí";
+  iut:situéDans iut:144;
+  iut:anneeInscription "2000"^^xsd:gYear;
+  iut:description "set of nine Early Romanesque churches in the Vall de Boí, Spain";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:44 a iut:Eglise;
+  iut:nomEglise "Mission San Antonio de Padua";
+  iut:situéDans iut:145;
+  iut:anneeInscription "2015"^^xsd:gYear;
+  iut:description "Spanish mission near Jolon, California, United States" .
+
+iut:47 a iut:Eglise;
+  owl:sameAs wd:Q1294648;
+  iut:nomEglise "Etchmiadzin Cathedral";
+  iut:situéDans iut:148;
+  iut:description "cultural heritage monument of Armenia";
+  iut:styleArchitectural wd:Q2860299 .
+
+iut:50 a iut:Eglise;
+  owl:sameAs wd:Q2350964;
+  iut:nomEglise "St. James' Cathedral";
+  iut:situéDans iut:151;
+  iut:description "cultural property in Bilbao, Spain";
+  iut:styleArchitectural wd:Q176483, wd:Q186363 .
+
+iut:51 a iut:Eglise;
+  owl:sameAs wd:Q2410105;
+  iut:nomEglise "Cathedral of Jaca";
+  iut:situéDans iut:152;
+  iut:description "cultural property in Jaca, Spain";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:52 a iut:Eglise;
+  iut:nomEglise "Co-cathedral of Santa María de la Redonda";
+  iut:situéDans iut:153;
+  iut:description "cathedral " .
+
+iut:55 a iut:Eglise;
+  iut:nomEglise "Cathedral of San Salvador, Oviedo";
+  iut:situéDans iut:156;
+  iut:description "religious church building in Spain, the thirteenth century " .
+
+iut:56 a iut:Eglise;
+  owl:sameAs wd:Q389210;
+  iut:nomEglise "Pamplona Cathedral";
+  iut:situéDans iut:157;
+  iut:description "cathedral in Spain";
+  iut:styleArchitectural wd:Q176483, wd:Q54111 .
+
+iut:58 a iut:Eglise;
+  owl:sameAs wd:Q231606;
+  iut:nomEglise "Catedral de Sevilla";
+  iut:situéDans iut:159;
+  iut:description "Catholic Cathedral in Seville (Formally a Mosque), Spain";
+  iut:styleArchitectural wd:Q176483 .
+
+iut:59 a iut:Eglise;
+  owl:sameAs wd:Q2942524;
+  iut:nomEglise "Cathedral of Santa María de Vitoria";
+  iut:situéDans iut:160;
+  iut:description "cultural property in Vitoria, Spain";
+  iut:styleArchitectural wd:Q176483 .
+
+iut:60 a iut:Eglise;
+  iut:nomEglise "Agen Cathedral";
+  iut:situéDans iut:161;
+  iut:description "cathedral located in Lot-et-Garonne, in France" .
+
+iut:61 a iut:Eglise;
+  iut:nomEglise "Auch Cathedral";
+  iut:situéDans iut:162;
+  iut:description "cathedral located in Gers, in France" .
+
+iut:62 a iut:Eglise;
+  iut:nomEglise "Bayonne Cathedral";
+  iut:situéDans iut:163;
+  iut:description "cathedral located in Pyrénées-Atlantiques, in France" .
+
+iut:63 a iut:Eglise;
+  owl:sameAs wd:Q2942348;
+  iut:nomEglise "Bazas Cathedral";
+  iut:situéDans iut:164;
+  iut:description "cathedral located in Gironde, in France";
+  iut:styleArchitectural wd:Q176483 .
+
+iut:64 a iut:Eglise;
+  iut:nomEglise "Bordeaux Cathedral";
+  iut:situéDans iut:165;
+  iut:description "cathedral located in Bordeaux" .
+
+iut:65 a iut:Eglise;
+  iut:nomEglise "Cahors Cathedral";
+  iut:situéDans iut:166;
+  iut:description "cathedral located in Lot, in France" .
+
+iut:66 a iut:Eglise;
+  owl:sameAs wd:Q1537302;
+  iut:nomEglise "Le Puy Cathedral";
+  iut:situéDans iut:167;
+  iut:description "cathedral located in Haute-Loire, in France";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:67 a iut:Eglise;
+  owl:sameAs wd:Q1736213;
+  iut:nomEglise "Périgueux Cathedral";
+  iut:situéDans iut:168;
+  iut:description "cathedral located in Dordogne, in France";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:69 a iut:Eglise;
+  owl:sameAs wd:Q2942289;
+  iut:nomEglise "Saint-Bertrand-de-Comminges Cathedral";
+  iut:situéDans iut:170;
+  iut:description "cathedral located in Haute-Garonne, in France";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:70 a iut:Eglise;
+  owl:sameAs wd:Q2942375;
+  iut:nomEglise "Saint-Lizier Cathedral";
+  iut:situéDans iut:171;
+  iut:description "cathedral located in Ariège, in France";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:71 a iut:Eglise;
+  owl:sameAs wd:Q1152972;
+  iut:nomEglise "Svetitskhoveli Cathedral";
+  iut:situéDans iut:172;
+  iut:description "cathedral in Mtskheta, Georgia";
+  iut:styleArchitectural wd:Q1788398 .
+
+iut:72 a iut:Eglise;
+  owl:sameAs wd:Q1354756;
+  iut:nomEglise "Cefalù Cathedral";
+  iut:situéDans iut:173;
+  iut:description "cathedral in Italy";
+  iut:styleArchitectural wd:Q47591 .
+
+iut:74 a iut:Eglise;
+  owl:sameAs wd:Q1303856;
+  iut:nomEglise "Cattedrale di Monreale";
+  iut:situéDans iut:175;
+  iut:description "church in Monreale, Sicily";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:76 a iut:Eglise;
+  owl:sameAs wd:Q5192604;
+  iut:nomEglise "Cuernavaca Cathedral";
+  iut:situéDans iut:177;
+  iut:description "religious building in Cuernavaca, Mexico";
+  iut:styleArchitectural wd:Q840829 .
+
+iut:77 a iut:Eglise;
+  iut:nomEglise "Canterbury Cathedral";
+  iut:situéDans iut:178;
+  iut:description "cathedral in Canterbury, Kent, England, founded in 597 " .
+
+iut:78 a iut:Eglise;
+  iut:nomEglise "Saint John the Baptist Cathedral (Pskov)";
+  iut:situéDans iut:179 .
+
+iut:79 a iut:Eglise;
+  iut:nomEglise "Cathedral of the Nativity in Suzdal";
+  iut:situéDans iut:180;
+  iut:description "Orthodox cathedral in Suzdal, Vladimir Oblast, Russia " .
+
+iut:80 a iut:Eglise;
+  iut:nomEglise "Dormition Cathedral";
+  iut:situéDans iut:181;
+  iut:description "cathedral in Odesa, Ukraine" .
+
+iut:81 a iut:Eglise;
+  iut:nomEglise "Cathedral of Saint Demetrius";
+  iut:situéDans iut:182;
+  iut:description "Romanian Orthodox cathedral in Craiova, Romania" .
+
+iut:82 a iut:Eglise;
+  iut:nomEglise "Saint Sophia Cathedral";
+  iut:situéDans iut:183;
+  iut:description "cathédrale gothique catholique devenue mosquée" .
+
+iut:83 a iut:Eglise;
+  iut:nomEglise "Church of San Francisco";
+  iut:situéDans iut:184;
+  iut:description "national monument of Chile" .
+
+iut:84 a iut:Eglise;
+  iut:nomEglise "Church of Quinchao";
+  iut:situéDans iut:185;
+  iut:description "church " .
+
+iut:85 a iut:Eglise;
+  owl:sameAs wd:Q280268;
+  iut:nomEglise "Regensburg Cathedral";
+  iut:situéDans iut:186;
+  iut:description "cathedral in Germany";
+  iut:styleArchitectural wd:Q176483 .
+
+iut:86 a iut:Eglise;
+  owl:sameAs wd:Q17054090;
+  iut:nomEglise "Zvartnots Cathedral";
+  iut:situéDans iut:187;
+  iut:description "cathedral in Armenia";
+  iut:styleArchitectural wd:Q2860299 .
+
+iut:88 a iut:Eglise;
+  iut:nomEglise "Salzburg Cathedral";
+  iut:situéDans iut:189;
+  iut:description "church in Austriaedit" .
+
+iut:90 a iut:Eglise;
+  iut:nomEglise "Cathedral Church of Saint Michael and All Angels, Barbados";
+  iut:situéDans iut:191;
+  iut:description "Cathedral Church in Barbados " .
+
+iut:91 a iut:Eglise;
+  iut:nomEglise "St. Patrick's Cathedral, Bridgetown";
+  iut:situéDans iut:192;
+  iut:description "church in Bruges, Belgium" .
+
+iut:92 a iut:Eglise;
+  owl:sameAs wd:Q1378149;
+  iut:nomEglise "Sint-Salvatorskathedraal";
+  iut:situéDans iut:193;
+  iut:description "church in Bruges, Belgium";
+  iut:styleArchitectural wd:Q176483, wd:Q186363, wd:Q744373 .
+
+iut:93 a iut:Eglise;
+  owl:sameAs wd:Q7633160;
+  iut:nomEglise "Sucre Cathedral";
+  iut:situéDans iut:194;
+  iut:description "16th century Roman Catholic church in Sucre, Bolivia";
+  iut:styleArchitectural wd:Q236122 .
+
+iut:94 a iut:Eglise;
+  iut:nomEglise "Roman Catholic Cathedral of Goiás";
+  iut:situéDans iut:195 .
+
+iut:95 a iut:Eglise;
+  iut:nomEglise "Cathedral of St. Louis of France";
+  iut:situéDans iut:196;
+  iut:description "Religious church building located in Cáceres, Mato Grosso, Brazil " .
+
+iut:96 a iut:Eglise;
+  owl:sameAs wd:Q2002465;
+  iut:nomEglise "Notre-Dame Basilica-Cathedral";
+  iut:situéDans iut:197;
+  iut:description "Catholic cathedral in Quebec City, Quebec, Canada";
+  iut:styleArchitectural wd:Q54111 .
+
+iut:97 a iut:Eglise;
+  owl:sameAs wd:Q1106554;
+  iut:nomEglise "Igreja da Sé";
+  iut:situéDans iut:198;
+  iut:description "cathedral of the Diocese of Macau";
+  iut:styleArchitectural wd:Q751878 .
+
+iut:98 a iut:Eglise;
+  iut:nomEglise "St Paul's Cathedral";
+  iut:situéDans iut:199;
+  iut:description "cathedral in the City of London, England, UK" .
+
+iut:99 a iut:Eglise;
+  iut:nomEglise "Dubrovnik Cathedral";
+  iut:situéDans iut:200;
+  iut:description "cathedral " .
+
+iut:100 a iut:Eglise;
+  owl:sameAs wd:Q15043487;
+  iut:nomEglise "Havana Cathedral";
+  iut:situéDans iut:201;
+  iut:description "Roman Catholic cathedral in Havana, Cuba";
+  iut:styleArchitectural wd:Q840829 .
+
+iut:101 a iut:Eglise;
+  iut:nomEglise "Garðar Cathedral";
+  iut:situéDans iut:202;
+  iut:description "ruined cathedral in Igaliku, Greenland " .
+
+iut:102 a iut:Pays;
+  rdfs:label "Belgique";
+  iut:nomPays "Belgique" .
+
+iut:103 a iut:Pays;
+  rdfs:label "Brésil";
+  iut:nomPays "Brésil" .
+
+iut:104 a iut:Pays;
+  rdfs:label "Bulgarie";
+  iut:nomPays "Bulgarie" .
+
+iut:105 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:107 a iut:Pays;
+  rdfs:label "Croatie";
+  iut:nomPays "Croatie" .
+
+iut:108 a iut:Pays;
+  rdfs:label "Croatie";
+  iut:nomPays "Croatie" .
+
+iut:109 a iut:Pays;
+  rdfs:label "Chypre";
+  iut:nomPays "Chypre" .
+
+iut:110 a iut:Pays;
+  rdfs:label "Chypre";
+  iut:nomPays "Chypre" .
+
+iut:111 a iut:Pays;
+  rdfs:label "Danemark";
+  iut:nomPays "Danemark" .
+
+iut:112 a iut:Pays;
+  rdfs:label "Finlande";
+  iut:nomPays "Finlande" .
+
+iut:113 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:114 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:106 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:115 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:116 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:117 a iut:Pays;
+  rdfs:label "Allemagne";
+  iut:nomPays "Allemagne" .
+
+iut:118 a iut:Pays;
+  rdfs:label "Allemagne";
+  iut:nomPays "Allemagne" .
+
+iut:119 a iut:Pays;
+  rdfs:label "Allemagne";
+  iut:nomPays "Allemagne" .
+
+iut:120 a iut:Pays;
+  rdfs:label "Allemagne";
+  iut:nomPays "Allemagne" .
+
+iut:121 a iut:Pays;
+  rdfs:label "Allemagne";
+  iut:nomPays "Allemagne" .
+
+iut:122 a iut:Pays;
+  rdfs:label "Allemagne";
+  iut:nomPays "Allemagne" .
+
+iut:123 a iut:Pays;
+  rdfs:label "Allemagne";
+  iut:nomPays "Allemagne" .
+
+iut:124 a iut:Pays;
+  rdfs:label "Guatemala";
+  iut:nomPays "Guatemala" .
+
+iut:125 a iut:Pays;
+  rdfs:label "Saint-Siège";
+  iut:nomPays "Saint-Siège" .
+
+iut:126 a iut:Pays;
+  rdfs:label "Inde";
+  iut:nomPays "Inde" .
+
+iut:127 a iut:Pays;
+  rdfs:label "Italie";
+  iut:nomPays "Italie" .
+
+iut:128 a iut:Pays;
+  rdfs:label "Italie";
+  iut:nomPays "Italie" .
+
+iut:129 a iut:Pays;
+  rdfs:label "Italie";
+  iut:nomPays "Italie" .
+
+iut:130 a iut:Pays;
+  rdfs:label "Inde";
+  iut:nomPays "Inde" .
+
+iut:131 a iut:Pays;
+  rdfs:label "Liban";
+  iut:nomPays "Liban" .
+
+iut:132 a iut:Pays;
+  rdfs:label "Malte";
+  iut:nomPays "Malte" .
+
+iut:133 a iut:Pays;
+  rdfs:label "Nicaragua";
+  iut:nomPays "Nicaragua" .
+
+iut:134 a iut:Pays;
+  rdfs:label "Norvège";
+  iut:nomPays "Norvège" .
+
+iut:135 a iut:Pays;
+  rdfs:label "Portugal";
+  iut:nomPays "Portugal" .
+
+iut:136 a iut:Pays;
+  rdfs:label "Moldavie";
+  iut:nomPays "Moldavie" .
+
+iut:137 a iut:Pays;
+  rdfs:label "Fédération de Russie";
+  iut:nomPays "Fédération de Russie" .
+
+iut:138 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:139 a iut:Pays;
+  rdfs:label "Slovaquie";
+  iut:nomPays "Slovaquie" .
+
+iut:140 a iut:Pays;
+  rdfs:label "Afrique du Sud";
+  iut:nomPays "Afrique du Sud" .
+
+iut:141 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:142 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:143 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:144 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:145 a iut:Pays;
+  rdfs:label "États-Unis d'Amérique";
+  iut:nomPays "États-Unis d'Amérique" .
+
+iut:45 a iut:Eglise;
+  iut:nomEglise "Hildesheim Cathedral";
+  iut:situéDans iut:146;
+  iut:description "cathedral church in Hildesheim, Germany" .
+
+iut:146 a iut:Pays;
+  rdfs:label "Allemagne";
+  iut:nomPays "Allemagne" .
+
+iut:46 a iut:Eglise;
+  owl:sameAs wd:Q5920;
+  iut:nomEglise "Cathedral of Trier";
+  iut:situéDans iut:147;
+  iut:description "Roman-Catholic cathedral in Trier, Germany";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:147 a iut:Pays;
+  rdfs:label "Allemagne";
+  iut:nomPays "Allemagne" .
+
+iut:148 a iut:Pays;
+  rdfs:label "Arménie";
+  iut:nomPays "Arménie" .
+
+iut:48 a iut:Eglise;
+  owl:sameAs wd:Q5901;
+  iut:nomEglise "Onze-Lieve-Vrouwekathedraal";
+  iut:situéDans iut:149;
+  iut:description "Roman-Catholic cathedral in Antwerp, Belgium";
+  iut:styleArchitectural wd:Q176483 .
+
+iut:149 a iut:Pays;
+  rdfs:label "Belgique";
+  iut:nomPays "Belgique" .
+
+iut:49 a iut:Eglise;
+  owl:sameAs wd:Q2942496;
+  iut:nomEglise "Astorga Cathedral";
+  iut:situéDans iut:150;
+  iut:description "cultural property in Astorga, Spain";
+  iut:styleArchitectural wd:Q176483 .
+
+iut:150 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:151 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:152 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:153 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:53 a iut:Eglise;
+  iut:nomEglise "Lugo Cathedral";
+  iut:situéDans iut:154;
+  iut:description """cultural property in Lugo, Spain
+""" .
+
+iut:154 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:54 a iut:Eglise;
+  owl:sameAs wd:Q2942729;
+  iut:nomEglise "Catedral de Mondoñedo";
+  iut:situéDans iut:155;
+  iut:description "cultural property in Mondoñedo, Spain";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:155 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:156 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:157 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:57 a iut:Eglise;
+  owl:sameAs wd:Q2942804;
+  iut:nomEglise "Cathedral of Santo Domingo de la Calzada";
+  iut:situéDans iut:158;
+  iut:description "Medieval cathedral in Santo Domingo de la Calzada, Spain. Has heritage listing";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:158 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:159 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:160 a iut:Pays;
+  rdfs:label "Espagne";
+  iut:nomPays "Espagne" .
+
+iut:161 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:162 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:163 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:164 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:165 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:166 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:167 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:168 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:68 a iut:Eglise;
+  iut:nomEglise "Reims Cathedral";
+  iut:situéDans iut:169;
+  iut:description "Roman Catholic cathedral of Reims in France" .
+
+iut:169 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:170 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:171 a iut:Pays;
+  rdfs:label "France";
+  iut:nomPays "France" .
+
+iut:172 a iut:Pays;
+  rdfs:label "Géorgie";
+  iut:nomPays "Géorgie" .
+
+iut:173 a iut:Pays;
+  rdfs:label "Italie";
+  iut:nomPays "Italie" .
+
+iut:73 a iut:Eglise;
+  owl:sameAs wd:Q753721;
+  iut:nomEglise "Modena Cathedral";
+  iut:situéDans iut:174;
+  iut:description "cathedral of Modena, Emilia-Romagna, Italy";
+  iut:styleArchitectural wd:Q46261 .
+
+iut:174 a iut:Pays;
+  rdfs:label "Italie";
+  iut:nomPays "Italie" .
+
+iut:175 a iut:Pays;
+  rdfs:label "Italie";
+  iut:nomPays "Italie" .
+
+iut:75 a iut:Eglise;
+  iut:nomEglise "Palermo Cathedral";
+  iut:situéDans iut:176;
+  iut:description "cathedral in Italy " .
+
+iut:176 a iut:Pays;
+  rdfs:label "Italie";
+  iut:nomPays "Italie" .
+
+iut:177 a iut:Pays;
+  rdfs:label "Mexique";
+  iut:nomPays "Mexique" .
+
+iut:178 a iut:Pays;
+  rdfs:label "Royaume-Uni";
+  iut:nomPays "Royaume-Uni" .
+
+iut:179 a iut:Pays;
+  rdfs:label "Russie";
+  iut:nomPays "Russie" .
+
+iut:180 a iut:Pays;
+  rdfs:label "Russie";
+  iut:nomPays "Russie" .
+
+iut:181 a iut:Pays;
+  rdfs:label "Ukraine";
+  iut:nomPays "Ukraine" .
+
+iut:182 a iut:Pays;
+  rdfs:label "Roumanie";
+  iut:nomPays "Roumanie" .
+
+iut:183 a iut:Pays;
+  rdfs:label "Ukraine";
+  iut:nomPays "Ukraine" .
+
+iut:184 a iut:Pays;
+  rdfs:label "Chile";
+  iut:nomPays "Chile" .
+
+iut:185 a iut:Pays;
+  rdfs:label "Chile";
+  iut:nomPays "Chile" .
+
+iut:186 a iut:Pays;
+  rdfs:label "Allemagne";
+  iut:nomPays "Allemagne" .
+
+iut:187 a iut:Pays;
+  rdfs:label "Arménie";
+  iut:nomPays "Arménie" .
+
+iut:87 a iut:Eglise;
+  owl:sameAs wd:Q262563;
+  iut:nomEglise "Graz Cathedral";
+  iut:situéDans iut:188;
+  iut:description "cathedral of the catholic diocese of Graz-Seckau";
+  iut:styleArchitectural wd:Q176483 .
+
+iut:188 a iut:Pays;
+  rdfs:label "Autriche";
+  iut:nomPays "Autriche" .
+
+iut:189 a iut:Pays;
+  rdfs:label "Autriche";
+  iut:nomPays "Autriche" .
+
+iut:89 a iut:Eglise;
+  iut:nomEglise "St. Stephen's Cathedral";
+  iut:situéDans iut:190;
+  iut:description "church in Vienna, Austria " .
+
+iut:190 a iut:Pays;
+  rdfs:label "Autriche";
+  iut:nomPays "Autriche" .
+
+iut:191 a iut:Pays;
+  rdfs:label "Barbade";
+  iut:nomPays "Barbade" .
+
+iut:192 a iut:Pays;
+  rdfs:label "Barbade";
+  iut:nomPays "Barbade" .
+
+iut:193 a iut:Pays;
+  rdfs:label "Belgique";
+  iut:nomPays "Belgique" .
+
+iut:194 a iut:Pays;
+  rdfs:label "Bolivie";
+  iut:nomPays "Bolivie" .
+
+iut:195 a iut:Pays;
+  rdfs:label "Brésil";
+  iut:nomPays "Brésil" .
+
+iut:196 a iut:Pays;
+  rdfs:label "Brésil";
+  iut:nomPays "Brésil" .
+
+iut:197 a iut:Pays;
+  rdfs:label "Canada";
+  iut:nomPays "Canada" .
+
+iut:198 a iut:Pays;
+  rdfs:label "Chine";
+  iut:nomPays "Chine" .
+
+iut:199 a iut:Pays;
+  rdfs:label "Royaume-Uni";
+  iut:nomPays "Royaume-Uni" .
+
+iut:200 a iut:Pays;
+  rdfs:label "Croatie";
+  iut:nomPays "Croatie" .
+
+iut:201 a iut:Pays;
+  rdfs:label "Cuba";
+  iut:nomPays "Cuba" .
+
+iut:202 a iut:Pays;
+  rdfs:label "Greenland";
+  iut:nomPays "Greenland" .
