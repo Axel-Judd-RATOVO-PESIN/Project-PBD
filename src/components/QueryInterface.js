@@ -115,21 +115,22 @@ const QueryInterface = () => {
             style={styles.textarea}
           />
         </div>
-        <button onClick={handleQueryExecution}>Execute SPARQL Query</button>
+        <button onClick={handleQueryExecution}>Executer la requête</button>
         {error && <p style={{ color: "red" }}>{error}</p>}
-        {results && (
-          <div>
-            <h2>Query Results</h2>  {/* Afficher le nom de l'application */} 
-            {results.length > 0 ? formatResults(results) : <p>No results found.</p>}
-          </div>
-        )}
-        {chartData && (
-          <div>
-            <h2>Architectural Styles Chart</h2>
-            <Pie data={chartData} />
-          </div>
-        )}
-      </div>
+        {results && chartData ? (
+        <div>
+              <h2>Style Architectural des églises</h2>
+              <Pie data={chartData} />
+            </div>
+          ) : results && results.length > 0 ? (
+            <div>
+              <h2>Résultat de la requête</h2>
+              {formatResults(results)}
+            </div>
+          ) : (
+            <p>Aucun Résultat.</p>
+          )}
+        </div>
     </main>
   );
 };
