@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { Pie } from "react-chartjs-2";
+import "chart.js/auto";
+
 
 const QueryInterface = () => {
   const [appName, setAppName] = useState("");
   const [endpoint, setEndpoint] = useState("");
   const [query, setQuery] = useState("");
   const [results, setResults] = useState(null);
+  const [chartData, setChartData] = useState(null);
   const [error, setError] = useState(null);
 
   const handleQueryExecution = async () => {
@@ -25,10 +29,44 @@ const QueryInterface = () => {
       const data = await response.json();
       setResults(data.results.bindings);
       setError(null);
+
+
+      if (data.results.bindings[0]?.styleCount) {
+        const labels = data.results.bindings.map((item) => item.architecturalStyle.value);
+        const counts = data.results.bindings.map((item) => parseInt(item.styleCount.value, 10));
+
+        setChartData({
+          labels,
+          datasets: [
+            {
+              label: "Architectural Styles",
+              data: counts,
+              backgroundColor: [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56",
+                "#8E44AD",
+                "#2ECC71",
+              ],
+            },
+          ],
+        });
+      }
     } catch (err) {
       setError(err.message);
       setResults(null);
+      setChartData(null);
     }
+  };
+
+  const formatResults = (results) => {
+    return results.map((result, index) => (
+      <div key={index} style={{ border: "1px solid #ccc", padding: "10px", marginBottom: "10px" }}>
+        <p><strong>Local Church:</strong> {result.localChurch?.value}</p>
+        <p><strong>Local Style:</strong> {result.localStyle?.value}</p>
+        <p><strong>Description:</strong> {result.localDescription?.value}</p>
+      </div>
+    ));
   };
 
   return (
@@ -77,14 +115,18 @@ const QueryInterface = () => {
             style={styles.textarea}
           />
         </div>
-        <button style={styles.button} onClick={handleQueryExecution}>
-          Exécuter la requête SPARQL
-        </button>
+        <button onClick={handleQueryExecution}>Execute SPARQL Query</button>
         {error && <p style={{ color: "red" }}>{error}</p>}
         {results && (
           <div>
-            <h2>Résultat de la requête</h2>
-            <pre>{JSON.stringify(results, null, 2)}</pre>
+            <h2>Query Results</h2>  {/* Afficher le nom de l'application */} 
+            {results.length > 0 ? formatResults(results) : <p>No results found.</p>}
+          </div>
+        )}
+        {chartData && (
+          <div>
+            <h2>Architectural Styles Chart</h2>
+            <Pie data={chartData} />
           </div>
         )}
       </div>
