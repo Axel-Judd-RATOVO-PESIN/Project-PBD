@@ -23,7 +23,7 @@ const Footer = () => {
     <br/>
     <br/>
           <a
-            href="/CV_RATOVO_PESIN_Axel.pdf"
+            href="/CV_Ahoussi_Nathan.pdf"
             target="_blank"
             rel="noopener noreferrer"
             style={styles.link}
@@ -33,7 +33,7 @@ const Footer = () => {
     <br/>
     <br/>
           <a
-            href="/CV_RATOVO_PESIN_Axel.pdf"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             style={styles.link}
@@ -77,7 +77,7 @@ const styles = {
     textAlign: 'right',
   },
   logoImage: {
-    width: '300px',
+    width: '230px',
   },
   link: {
     textDecoration: 'none', 
