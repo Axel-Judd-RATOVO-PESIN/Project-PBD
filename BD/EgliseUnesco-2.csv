@@ -1,0 +1,106 @@
+eglise_id,nom_eglise,pays_id,nom_pays,annee_inscription,style_architectural,courte_description
+1,Tournai Cathedral,102,Belgique,2000,,cathedral 
+2,Cathedral of Brasília,103,Brésil,1987,,"Catholic church in Brasília, Brazil"
+3,Boyana Church,104,Bulgarie,1979,,"church in Bulgaria
+"
+4,Church of San Juan Bautista,105,Espagne,2000,,"Medieval church located in Baños de Cerrato (Palencia province, Spain) "
+5,La Grande Muraille,106,France,1987,,"church located in Gironde, in France"
+6,Euphrasian Basilica,107,Croatie,1997,,church 
+7,Šibenik Cathedral,108,Croatie,2000,,cathedral in Croatia
+8,"Saint Anthony church, Paphos",109,Chypre,1980,,"byzantine church in Paphos, Cyprus"
+9,Painted Churches in the Troödos Region,110,Chypre,1985,,
+10,Roskilde Cathedral,111,Danemark,1995,,cathedral in Denmark (Church of Denmark)
+11,Petäjävesi Old Church,112,Finlande,1994,,"church building in Petäjävesi, Finland"
+12,Notre-Dame de Chartres,113,France,1979,,medieval Roman Rite Catholic cathedral 
+13,Notre-Dame d'Amiens,114,France,1981,,"cathedral located in Somme, in France"
+14,Abbey Church of Saint-Savin-sur-Gartempe,115,France,1983,,"abbey located in Vienne, in France"
+15,Bourges Cathedral,116,France,1992,,"cathedral in Bourges, Cher, France"
+16,Aachen Cathedral,117,Allemagne,1978,,"Roman-Catholic cathedral in Aachen, Germany"
+17,Speyer Cathedral,118,Allemagne,1981,,"cathedral in Speyer, Germany
+"
+18,St Mary's Cathedral and St Michael's Church at Hildesheim,119,Allemagne,1985,,World Heritage site in Germany
+19,Wieskirche,120,Allemagne,1983,,"Roman Catholic church in the municipality of Steingaden, Bavaria, Germany"
+20,Saint Giles church (Lübeck),121,Allemagne,1987,,"church in Lübeck (Schleswig-Holstein, Germany)"
+21,Cologne Cathedral,122,Allemagne,1996,,"Roman-Catholic cathedral in Cologne, Germany"
+22,Naumburg Cathedral,123,Allemagne,2018,,"cathedral in Saxony-Anhalt, Germany"
+23,La Merced Church,124,Guatemala,1979,,church in Antigua Guatemala
+24,St Stephen of the Abyssinians,125,Saint-Siège,1984,,church of the Vatican City
+25,Church of St. Francis of Assisi,126,Inde,1986,,"church and cloister in Velha Goa, India"
+26,Chiesa di tutti i Santi,127,Italie,1995,,"church building in Naples, Italy"
+27,Santissimo Nome di Maria al Foro Traiano,128,Italie,1995,,"church building in Rome, Italy"
+28,Arab-Norman Palermo and the Cathedral Churches of Cefalú and Monreale,129,Italie,2015,,"World Heritage Site in Sicily, Italy"
+29,St. Paul's Church,130,Inde,1984,,"church in Vishakhapatnam, India"
+30,"Saint John, Byblos",131,Liban,1984,,"Cathedral in Byblos, Lebanon"
+31,"Church of St Catherine of Italy, Valletta",132,Malte,1980,,"church building in Valletta, Malta"
+32,León Cathedral,133,Nicaragua,2011,,cathedral in Nicaragua
+33,Urnes Stave Church,134,Norvège,1979,,"church building in Luster, Vestland, Norway"
+34,Batalha Monastery,135,Portugal,1983,,"building in Batalha, Leiria District, Portugal"
+35,Măzărache Church,136,Moldavie,1993,,architectural monument of national importance in Moldova
+36,"Church of the Ascension, Kolomenskoye",137,Fédération de Russie,1994,,
+37,Saint-Louis en l'Île,138,France,2000,,"church located in Paris, in France"
+38,"Church of Visitation of Virgin Mary, Vlkolínec",139,Slovaquie,1993,,"Roman Catholic church and national cultural monument in the town of Ružomberok, Vlkolínec borough, Ružomberok district, Slovakia"
+39,"Garrison Church, Robben Island",140,Afrique du Sud,1999,,"building in South Africa
+"
+40,Burgos Cathedral,141,Espagne,1984,,"cathedral in Castile, Spain "
+41,Poblet Monastery,142,Espagne,1991,,monastery
+42,"Church of San Lázaro, San Cristóbal de La Laguna",143,Espagne,1999,,"cultural property in San Cristóbal de La Laguna, Spain"
+43,Catalan Romanesque Churches of the Vall de Boí,144,Espagne,2000,,"set of nine Early Romanesque churches in the Vall de Boí, Spain"
+44,Mission San Antonio de Padua,145,États-Unis d'Amérique,2015,,"Spanish mission near Jolon, California, United States"
+45,Hildesheim Cathedral,146,Allemagne,,,"cathedral church in Hildesheim, Germany"
+46,Cathedral of Trier,147,Allemagne,,,"Roman-Catholic cathedral in Trier, Germany"
+47,Etchmiadzin Cathedral,148,Arménie,,,cultural heritage monument of Armenia
+48,Onze-Lieve-Vrouwekathedraal,149,Belgique,,,"Roman-Catholic cathedral in Antwerp, Belgium"
+49,Astorga Cathedral,150,Espagne,,,"cultural property in Astorga, Spain"
+50,St. James' Cathedral,151,Espagne,,,"cultural property in Bilbao, Spain"
+51,Cathedral of Jaca,152,Espagne,,,"cultural property in Jaca, Spain"
+52,Co-cathedral of Santa María de la Redonda,153,Espagne,,,cathedral 
+53,Lugo Cathedral,154,Espagne,,,"cultural property in Lugo, Spain
+"
+54,Catedral de Mondoñedo,155,Espagne,,,"cultural property in Mondoñedo, Spain"
+55,"Cathedral of San Salvador, Oviedo",156,Espagne,,,"religious church building in Spain, the thirteenth century "
+56,Pamplona Cathedral,157,Espagne,,,cathedral in Spain
+57,Cathedral of Santo Domingo de la Calzada,158,Espagne,,,"Medieval cathedral in Santo Domingo de la Calzada, Spain. Has heritage listing"
+58,Catedral de Sevilla,159,Espagne,,,"Catholic Cathedral in Seville (Formally a Mosque), Spain"
+59,Cathedral of Santa María de Vitoria,160,Espagne,,,"cultural property in Vitoria, Spain"
+60,Agen Cathedral,161,France,,,"cathedral located in Lot-et-Garonne, in France"
+61,Auch Cathedral,162,France,,,"cathedral located in Gers, in France"
+62,Bayonne Cathedral,163,France,,,"cathedral located in Pyrénées-Atlantiques, in France"
+63,Bazas Cathedral,164,France,,,"cathedral located in Gironde, in France"
+64,Bordeaux Cathedral,165,France,,,cathedral located in Bordeaux
+65,Cahors Cathedral,166,France,,,"cathedral located in Lot, in France"
+66,Le Puy Cathedral,167,France,,,"cathedral located in Haute-Loire, in France"
+67,Périgueux Cathedral,168,France,,,"cathedral located in Dordogne, in France"
+68,Reims Cathedral,169,France,,,Roman Catholic cathedral of Reims in France
+69,Saint-Bertrand-de-Comminges Cathedral,170,France,,,"cathedral located in Haute-Garonne, in France"
+70,Saint-Lizier Cathedral,171,France,,,"cathedral located in Ariège, in France"
+71,Svetitskhoveli Cathedral,172,Géorgie,,,"cathedral in Mtskheta, Georgia"
+72,Cefalù Cathedral,173,Italie,,,cathedral in Italy
+73,Modena Cathedral,174,Italie,,,"cathedral of Modena, Emilia-Romagna, Italy"
+74,Cattedrale di Monreale,175,Italie,,,"church in Monreale, Sicily"
+75,Palermo Cathedral,176,Italie,,,cathedral in Italy 
+76,Cuernavaca Cathedral,177,Mexique,,,"religious building in Cuernavaca, Mexico"
+77,Canterbury Cathedral,178,Royaume-Uni,,,"cathedral in Canterbury, Kent, England, founded in 597 "
+78,Saint John the Baptist Cathedral (Pskov),179,Russie,,,
+79,Cathedral of the Nativity in Suzdal,180,Russie,,,"Orthodox cathedral in Suzdal, Vladimir Oblast, Russia "
+80,Dormition Cathedral,181,Ukraine,,,"cathedral in Odesa, Ukraine"
+81,Cathedral of Saint Demetrius,182,Roumanie,,,"Romanian Orthodox cathedral in Craiova, Romania"
+82,Saint Sophia Cathedral,183,Ukraine,,,cathédrale gothique catholique devenue mosquée
+83,Church of San Francisco,184,Chile,,,national monument of Chile
+84,Church of Quinchao,185,Chile,,,church 
+85,Regensburg Cathedral,186,Allemagne,,,cathedral in Germany
+86,Zvartnots Cathedral,187,Arménie,,,cathedral in Armenia
+87,Graz Cathedral,188,Autriche,,,cathedral of the catholic diocese of Graz-Seckau
+88,Salzburg Cathedral,189,Autriche,,,church in Austriaedit
+89,St. Stephen's Cathedral,190,Autriche,,,"church in Vienna, Austria "
+90,"Cathedral Church of Saint Michael and All Angels, Barbados",191,Barbade,,,Cathedral Church in Barbados 
+91,"St. Patrick's Cathedral, Bridgetown",192,Barbade,,,"church in Bruges, Belgium"
+92,Sint-Salvatorskathedraal,193,Belgique,,,"church in Bruges, Belgium"
+93,Sucre Cathedral,194,Bolivie,,,"16th century Roman Catholic church in Sucre, Bolivia"
+94,Roman Catholic Cathedral of Goiás,195,Brésil,,,
+95,Cathedral of St. Louis of France,196,Brésil,,,"Religious church building located in Cáceres, Mato Grosso, Brazil "
+96,Notre-Dame Basilica-Cathedral,197,Canada,,,"Catholic cathedral in Quebec City, Quebec, Canada"
+97,Igreja da Sé,198,Chine,,,cathedral of the Diocese of Macau
+98,St Paul's Cathedral,199,Royaume-Uni,,,"cathedral in the City of London, England, UK"
+99,Dubrovnik Cathedral,200,Croatie,,,cathedral 
+100,Havana Cathedral,201,Cuba,,,"Roman Catholic cathedral in Havana, Cuba"
+101,Garðar Cathedral,202,Greenland,,,"ruined cathedral in Igaliku, Greenland "

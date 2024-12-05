@@ -1,0 +1,106 @@
+Commande pour lié toute le dépots local au dépôt distant :
+
+PREFIX iut: <https://cours.iut-orsay.fr/npbd/projet/ratovo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX schema: <http://schema.org/>
+
+CONSTRUCT {
+  ?localChurch owl:sameAs ?wikidataChurch ;
+               iut:styleArchitectural ?styleWiki .
+}
+WHERE {
+  # Données locales
+  ?localChurch a iut:Eglise ;
+               iut:nomEglise ?localName ;
+               iut:description ?localDescription .
+
+  # Données Wikidata
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?wikidataChurch wdt:P31 ?instanceType ; # Instance de type église
+                    rdfs:label ?wikidataName ;
+                    schema:description ?wikidataDescription ;
+                    wdt:P149 ?styleWiki .
+    FILTER(LANG(?wikidataName) = "en")
+    FILTER(LANG(?wikidataDescription) = "en")
+    # Vérifier les deux types d'instances
+    VALUES ?instanceType { wd:Q16970 wd:Q2977 }
+  }
+
+  # Comparaison des noms et descriptions
+  FILTER(STR(?localName) = STR(?wikidataName))
+  FILTER(STR(?localDescription) = STR(?wikidataDescription))
+}
+
+
+
+Commande pour insérer les styles architecturaux de Wikidata dans ceux locaux :
+
+PREFIX iut: <https://cours.iut-orsay.fr/npbd/projet/ratovo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX schema: <http://schema.org/>
+
+INSERT {
+  ?localChurch owl:sameAs ?wikidataChurch ;
+               iut:styleArchitectural ?styleWiki .
+}
+WHERE {
+  # Données locales
+  ?localChurch a iut:Eglise ;
+               iut:nomEglise ?localName ;
+               iut:description ?localDescription .
+
+  # Données Wikidata
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?wikidataChurch wdt:P31 ?instanceType ; # Instance de type église
+                    rdfs:label ?wikidataName ;
+                    schema:description ?wikidataDescription ;
+                    wdt:P149 ?styleWiki .
+    FILTER(LANG(?wikidataName) = "en")
+    FILTER(LANG(?wikidataDescription) = "en")
+    # Vérifier les deux types d'instances
+    VALUES ?instanceType { wd:Q16970 wd:Q2977 }
+  }
+
+  # Comparaison des noms et descriptions
+  FILTER(STR(?localName) = STR(?wikidataName))
+  FILTER(STR(?localDescription) = STR(?wikidataDescription))
+}
+
+
+
+Commande pour afficher les Noms des eglises, styles architecturaux et description des églises locaux :
+PREFIX iut: <https://cours.iut-orsay.fr/npbd/projet/ratovo/>
+SELECT ?nomLocal ?styleArchi ?localDescription 
+WHERE {
+  # Données locales
+  ?localChurch a iut:Eglise ;
+	       iut:styleArchitectural ?styleArchi;
+               iut:description ?localDescription;
+               iut:nomEglise ?nomLocal.
+}
+
+Commande pour répondre à la question du projet :
+PREFIX iut: <https://cours.iut-orsay.fr/npbd/projet/ratovo/>
+SELECT ?architecturalStyle (COUNT(?church) AS ?styleCount)
+WHERE {
+  ?church a iut:Eglise ;
+          iut:styleArchitectural ?architecturalStyle .
+}
+GROUP BY ?architecturalStyle
+ORDER BY DESC(?styleCount)
+
+

@@ -33,7 +33,7 @@ const Footer = () => {
     <br/>
     <br/>
           <a
-            href=""
+            href="/Documentation.pdf"
             target="_blank"
             rel="noopener noreferrer"
             style={styles.link}

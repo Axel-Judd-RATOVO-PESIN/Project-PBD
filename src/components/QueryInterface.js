@@ -62,8 +62,8 @@ const QueryInterface = () => {
   const formatResults = (results) => {
     return results.map((result, index) => (
       <div key={index} style={{ border: "1px solid #ccc", padding: "10px", marginBottom: "10px" }}>
-        <p><strong>Local Church:</strong> {result.localChurch?.value}</p>
-        <p><strong>Local Style:</strong> {result.localStyle?.value}</p>
+        <p><strong>Nom de l'Eglise:</strong> {result.nomLocal?.value}</p>
+        <p><strong>Local Style:</strong> {result.styleArchi?.value}</p>
         <p><strong>Description:</strong> {result.localDescription?.value}</p>
       </div>
     ));

@@ -9,7 +9,7 @@ const Navbar = () => {
 
         {/* Documentation Link */}
         <a
-          href="/CV_RATOVO_PESIN_Axel.pdf"
+          href="/Documentation.pdf"
           target="_blank"
           rel="noopener noreferrer"
           style={styles.link}
@@ -24,7 +24,7 @@ const Navbar = () => {
           <strong>Projet : Nouveaux Paradigmes de BD <br /></strong>
           Une application Web intelligente dotée d'une technologie sémantique concernant les églises classées à l'UNESCO
         </p>
-        <button style={styles.button}><strong>Learn More</strong></button>
+        <button style={styles.button}><strong><a href="/Documentation.pdf" target="_blank" rel="noopener noreferrer"> Learn More</a></strong></button>
       </div>
     </div>
   );
@@ -87,6 +87,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '1rem',
     transition: 'background-color 0.3s',
+    textDecoration: 'none',
   },
 };
 
