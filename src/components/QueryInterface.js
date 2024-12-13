@@ -1,7 +1,6 @@
+import "chart.js/auto";
 import React, { useState } from "react";
 import { Pie } from "react-chartjs-2";
-import "chart.js/auto";
-
 
 const QueryInterface = () => {
   const [appName, setAppName] = useState("");
@@ -29,7 +28,6 @@ const QueryInterface = () => {
       const data = await response.json();
       setResults(data.results.bindings);
       setError(null);
-
 
       if (data.results.bindings[0]?.styleCount) {
         const labels = data.results.bindings.map((item) => item.architecturalStyle.value);
@@ -91,33 +89,28 @@ const QueryInterface = () => {
           <h2>Requêtes Simplifiées</h2>
           <div style={styles.cardContainer}>
             {/* Première carte avec la requête 1 */}
-            <div style={styles.card}>
+            <div
+              style={styles.card}
+              onClick={() => {
+                setQuery(`
+                  PREFIX iut: <https://cours.iut-orsay.fr/npbd/projet/ratovo/>
+                  SELECT ?architecturalStyle (COUNT(?church) AS ?styleCount)
+                  WHERE {
+                    ?church a iut:Eglise ;
+                            iut:styleArchitectural ?architecturalStyle .
+                  }
+                  GROUP BY ?architecturalStyle
+                  ORDER BY DESC(?styleCount)
+                `);
+              }}
+            >
               <h3 style={styles.cardTitle}>Requête 1: Styles architecturaux</h3>
               <p style={styles.cardDescription}>
-                Cette requête retourne les styles architecturaux des églises et leur nombre.
+              Question : quel style architectural est le plus représenté parmi les églises classées au patrimoine mondial de l'UNESCO ?
               </p>
-              <button
-                onClick={() => {
-                  setQuery(`
-                    PREFIX iut: <https://cours.iut-orsay.fr/npbd/projet/ratovo/>
-                    SELECT ?architecturalStyle (COUNT(?church) AS ?styleCount)
-                    WHERE {
-                      ?church a iut:Eglise ;
-                              iut:styleArchitectural ?architecturalStyle .
-                    }
-                    GROUP BY ?architecturalStyle
-                    ORDER BY DESC(?styleCount)
-                  `);
-                }}
-                style={styles.cardButton}
-              >
-                Exécuter
-              </button>
             </div>
           </div>
         </div>
-
-
 
         {/* Interface SPARQL */}
         <h1 style={styles.title}>Interface pour requête SPARQL</h1>
@@ -151,19 +144,19 @@ const QueryInterface = () => {
         <button onClick={handleQueryExecution}>Executer la requête</button>
         {error && <p style={{ color: "red" }}>{error}</p>}
         {results && chartData ? (
-        <div>
-              <h2>Style Architectural des églises</h2>
-              <Pie data={chartData} />
-            </div>
-          ) : results && results.length > 0 ? (
-            <div>
-              <h2>Résultat de la requête</h2>
-              {formatResults(results)}
-            </div>
-          ) : (
-            <p>Aucun Résultat.</p>
-          )}
-        </div>
+          <div>
+            <h2>Style Architectural des églises</h2>
+            <Pie data={chartData} />
+          </div>
+        ) : results && results.length > 0 ? (
+          <div>
+            <h2>Résultat de la requête</h2>
+            {formatResults(results)}
+          </div>
+        ) : (
+          <p>Aucun Résultat.</p>
+        )}
+      </div>
     </main>
   );
 };
@@ -228,16 +221,30 @@ const styles = {
     borderRadius: "5px",
     resize: "none",
   },
-  button: {
-    display: "block",
-    width: "100%",
-    padding: "10px",
-    fontSize: "1rem",
-    backgroundColor: "#007BFF",
-    color: "#fff",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
+  cardContainer: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+  },
+  card: {
+    cursor: 'pointer',
+    padding: '20px',
+    backgroundColor: '#fff',
+    border: '1px solid #ccc',
+    borderRadius: '10px',
+    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+    transition: 'transform 0.2s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.02)',
+    },
+  },
+  cardTitle: {
+    fontSize: '1.2rem',
+    marginBottom: '10px',
+  },
+  cardDescription: {
+    fontSize: '1rem',
+    color: '#555',
   },
 };
 
